@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.circle_one{
+    width: 400px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 400px;
+    background-color: rebeccapurple
+}
+.circle_two{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: red;
+}
+.circle_three{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+.circle_four{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+/*Styling the inner circles */
+.one{
+    display: flex;
+    bottom: 1px solid black;
+    overflow: hidden; 
+}
