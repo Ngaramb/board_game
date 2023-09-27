@@ -1,6 +1,6 @@
-const start = documen.getElementById('start');
-const woman = document.getElementById('woman');
-const tennis = document.getElementById('tennis');
+const start = document.getElementById("start");
+const woman = document.getElementById("woman");
+const tennis = document.getElementById("tennis");
 const computer = document.getElementById("computer");
 const toilet = document.getElementById("toilet");
 const gorilla = document.getElementById("gorilla");
@@ -32,13 +32,71 @@ const pad = document.getElementById("pad");
 const women_gemitals = document.getElementById("women_gemitals");
 const finish = document.getElementById("finish");
 const cards_container = document.getElementById("cards_container");
-const shuffle_btn = documment.getElementById("shuffle");
+const shuffle_btn = document.getElementById("shuffle");
+const image = document.getElementById("image");
+const card_title = document.getElementById("card_title");
+const card_desc = document.getElementById("card_desc");
+const cards = [
+  {
+    id: 1,
+    image: 0,
+    description: "Meat",
+  },
+  {
+    id: 2,
+    image: 1,
+    description: "Board game for women knowledge",
+  },
+  {
+    id: 3,
+    image: 2,
+    description: "Women periods",
+  },
+  {
+    id: 4,
+    image: 3,
+    description: "Board game for men knowledge",
+  },
+  {
+    id: 5,
+    image: 4,
+    description: "Board game for men knowledge",
+  },
+  {
+    id: 6,
+    image: 5,
+    description: "Board game for men knowledge",
+  },
+  {
+    id: 7,
+    image: 6,
+    description: "Board game for men knowledge",
+  },
+];
+const len = cards.length;
 
-const cards = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38.39,40,41,42,43,44,45,46,47,48,49,50]
+const all_cards = cards.forEach((card) => {
+  console.log(card.id);
+  console.log(card.description);
+  console.log(card.image);
+});
 
-function shuffleCards(){
-    cards.classList.remove("hidden");
-    const card_images = cards.createElement("img");
-    card_images.style.height("370px");
+function shuffleCards() {
+  cards_container.classList.remove("hidden");
+  image.classList.remove("hidden");
+  cards_container.classList.remove("hidden");
+  if (image) {
+    function getRandomElement(array) {
+      const randomIndex = Math.floor(Math.random() * array.length);
+      const randomImage = array[randomIndex].image;
+      image.setAttribute("src", "cards/" + randomImage + ".png");
+      return array[randomIndex].description;
+    }
+
+    const randomObject = getRandomElement(cards);
+    console.log("Randomly picked object:", randomObject);
+    card_title.innerText = "Card Details";
+    card_desc.innerText = randomObject;
+  }
 }
 shuffle_btn.addEventListener("click", shuffleCards);
