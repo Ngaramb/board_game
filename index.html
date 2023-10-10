@@ -16037,7 +16037,7 @@ z"
         </div>
         <div class="card_transcriber">
           <h2 id="card_title">Game Instructions</h2>
-          <p id="card_desc" >
+          <p id="card_desc">
             To start a game, you need to shuffle the cards, After you shuffle
             the cards, you have to choose from the description what corresponds
             to the displayed card, if the card is correct, You will advance to
@@ -16046,13 +16046,18 @@ z"
           </p>
         </div>
       </div>
+	  <div class="cards_desc">
+        <div id="checkboxContainer">
+			<div id="alignment"></div>
+		  </div>
+      </div>
     </div>
     <div class="shuffle_btn">
       <button id="shuffle" onclick="shuffleCards()">🔀Shuffle cards</button>
     </div>
     <div class="players">
       <div id="player_one" class="player_one">
-        <p>Player 1</p>
+        <p onclick="guessTheCard()">Player 1</p>
       </div>
       <div id="player_two" class="player_two">
         <p>Player 2</p>
