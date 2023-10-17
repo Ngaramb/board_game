@@ -1,43 +1,11 @@
-const start = document.getElementById("start");
-const woman = document.getElementById("woman");
-const tennis = document.getElementById("tennis");
-const computer = document.getElementById("computer");
-const toilet = document.getElementById("toilet");
-const gorilla = document.getElementById("gorilla");
-const pregnant = document.getElementById("pregnant");
-const open_pad = document.getElementById("open_pad");
-const white_girl = document.getElementById("white_girl");
-const black_girl = document.getElementById("black_girl");
-const headband_girl = document.getElementById("headband_girl");
-const drummer = document.getElementById("drummer");
-const giraffe = document.getElementById("giraffe");
-const closed_pad = document.getElementById("closed_pad");
-const cup = document.getElementById("cup");
-const bottle = document.getElementById("bottle");
-const lion = document.getElementById("lion");
-const serum = document.getElementById("serum");
-const motorcycle = document.getElementById("motorcycle");
-const waist = document.getElementById("waist");
-const pills = document.getElementById("pills");
-const headphones = document.getElementById("headphones");
-const wet_pad = document.getElementById("wet_pad");
-const calendar = document.getElementById("calendar");
-const house = document.getElementById("house");
-const phone = document.getElementById("phone");
-const wet_underwear = document.getElementById("wet_underwear");
-const rider = document.getElementById("rider");
-const billboard = document.getElementById("billboard");
-const underwear = document.getElementById("underwear");
-const pad = document.getElementById("pad");
-const women_gemitals = document.getElementById("women_gemitals");
-const finish = document.getElementById("finish");
 const cards_container = document.getElementById("cards_container");
 const shuffle_btn = document.getElementById("shuffle");
 const image = document.getElementById("image");
 const card_title = document.getElementById("card_title");
 const card_desc = document.getElementById("card_desc");
-const checkboxContainer = document.getElementById('checkboxContainer');
+const checkboxContainer = document.getElementById("checkboxContainer");
 const alignment = document.getElementById("alignment");
+const score_nbr = document.getElementById("score_nbr");
 const cards = [
   {
     id: 1,
@@ -49,79 +17,92 @@ const cards = [
     id: 3,
     image: 2,
     hint: "Women",
-    description: "Menstruation is a woman's monthly bleeding, often called your “period.” When you menstruate, your body discards the monthly buildup of the lining of your uterus (womb). Menstrual blood and tissue flow from your uterus through the small opening in your cervix and pass out of your body through your vagina.",
+    description:
+      "Menstruation is a woman's monthly bleeding, often called your “period.” When you menstruate, your body discards the monthly buildup of the lining of your uterus (womb). Menstrual blood and tissue flow from your uterus through the small opening in your cervix and pass out of your body through your vagina.",
   },
   {
     id: 4,
     image: 3,
     hint: "Women.",
-    description: "An absorbent pad worn by women to absorb menstrual blood; a sanitary towel.",
+    description:
+      "An absorbent pad worn by women to absorb menstrual blood; a sanitary towel.",
   },
   {
     id: 5,
     image: 4,
     hint: "Human Body",
-    description: "The organ in the lower body of a woman or female mammal where offspring are conceived and in which they gestate before birth; the womb.",
+    description:
+      "The organ in the lower body of a woman or female mammal where offspring are conceived and in which they gestate before birth; the womb.",
   },
   {
     id: 6,
     image: 5,
     hint: "Hygiene",
-    description: "A menstrual cup is a small, bell-shaped cup that a person can insert into their vagina to collect menstrual blood during a period. They are made of medical-grade silicone, rubber, or plastic and are usually reusable. People simply empty the cup, wash it with soap and water, and insert it again.",
+    description:
+      "A menstrual cup is a small, bell-shaped cup that a person can insert into their vagina to collect menstrual blood during a period. They are made of medical-grade silicone, rubber, or plastic and are usually reusable. People simply empty the cup, wash it with soap and water, and insert it again.",
   },
   {
     id: 7,
     image: 6,
     hint: "Hygiene",
-    description: "Reusable menstrual pads are cloth pads that can be used several times. They absorbs the menstrual blood and the pad should stay for about 4-5 hours depending on your menstrual flow. After use, you need to wash the cloth really well and remove every stain of blood and then you can reuse the same pad.",
+    description:
+      "Reusable menstrual pads are cloth pads that can be used several times. They absorbs the menstrual blood and the pad should stay for about 4-5 hours depending on your menstrual flow. After use, you need to wash the cloth really well and remove every stain of blood and then you can reuse the same pad.",
   },
   {
     id: 8,
     image: 7,
     hint: "Hygiene",
-    description: "One of the materials/methods of absorbing menstrual flow during your period. Tampons are designed to be inserted into the vagina with or without an applicator. You may be surprised to learn that the FDA regulates tampons as medical devices. ",
+    description:
+      "One of the materials/methods of absorbing menstrual flow during your period. Tampons are designed to be inserted into the vagina with or without an applicator. You may be surprised to learn that the FDA regulates tampons as medical devices. ",
   },
   {
     id: 9,
     image: 8,
     hint: "human Body",
-    description: "Most women and girls get it. It's a fluid or mucus that keeps the vagina clean and moist, and protects it from infection.",
+    description:
+      "Most women and girls get it. It's a fluid or mucus that keeps the vagina clean and moist, and protects it from infection.",
   },
   {
     id: 10,
     image: 9,
     hint: "Human Body",
-    description: " The monthly series of changes the body goes through to prepare for pregnancy. Each month, one of the ovaries releases an egg. This is called ovulation. Hormonal changes at this time get the uterus ready for pregnancy. ",
+    description:
+      " The monthly series of changes the body goes through to prepare for pregnancy. Each month, one of the ovaries releases an egg. This is called ovulation. Hormonal changes at this time get the uterus ready for pregnancy. ",
   },
   {
     id: 11,
     image: 10,
     hint: "Medicine",
-    description: "A contraceptive pill that is effective up to about seventy-two hours after intercourse.",
+    description:
+      "A contraceptive pill that is effective up to about seventy-two hours after intercourse.",
   },
   {
     id: 12,
     image: 11,
     hint: "Human Body",
-    description: "A point in time 12 months after a woman's last period. The years leading up to that point, when women may have changes in their monthly cycles, hot flashes, or other symptoms, are called the menopausal transition or perimenopause. ",
+    description:
+      "A point in time 12 months after a woman's last period. The years leading up to that point, when women may have changes in their monthly cycles, hot flashes, or other symptoms, are called the menopausal transition or perimenopause. ",
   },
   {
     id: 13,
     image: 12,
     hint: "Prevention",
-    description: "A sheath-shaped barrier device used during sexual intercourse to reduce the probability of pregnancy or a sexually transmitted infection (STI). ",
+    description:
+      "A sheath-shaped barrier device used during sexual intercourse to reduce the probability of pregnancy or a sexually transmitted infection (STI). ",
   },
   {
     id: 14,
     image: 13,
     hint: "STD",
-    description: "HIV/AIDS, A chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV).",
+    description:
+      "HIV/AIDS, A chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV).",
   },
   {
     id: 15,
     image: 14,
-    hint:"Establishment",
-    description: " The station, located in Nyamirambo, is a safe place for the adolescent in the area where they can express themselves, learn about sexual activities, ...",
+    hint: "Establishment",
+    description:
+      " The station, located in Nyamirambo, is a safe place for the adolescent in the area where they can express themselves, learn about sexual activities, ...",
   },
   {
     id: 16,
@@ -139,13 +120,15 @@ const cards = [
     id: 18,
     image: 17,
     hint: "Medicine",
-    description: "Used to reduce fever and treat pain or inflammation caused by many conditions such as headache, toothache, back pain, arthritis, menstrual cramps, ...",
+    description:
+      "Used to reduce fever and treat pain or inflammation caused by many conditions such as headache, toothache, back pain, arthritis, menstrual cramps, ...",
   },
   {
     id: 19,
     image: 18,
     hint: "Women Support",
-    description: "The program is aimed at providing psychosocial, medical, police and legal services to adult and child survivors of gender based violence and child abuse ... ",
+    description:
+      "The program is aimed at providing psychosocial, medical, police and legal services to adult and child survivors of gender based violence and child abuse ... ",
   },
   {
     id: 20,
@@ -295,7 +278,8 @@ const cards = [
     id: 44,
     image: 43,
     hint: "Name",
-    description: "Name of flower mostly used to express love and it has the best smell",
+    description:
+      "Name of flower mostly used to express love and it has the best smell",
   },
   {
     id: 45,
@@ -336,36 +320,6 @@ const cards = [
       "Campaign established to develop and boost Rwandan Tourism. Supports Arsenal and Paris St Germain.",
   },
 ];
-
-
-cards.forEach(item => {
-  const checkbox = document.createElement('input');
-  checkbox.type = 'radio';
-  checkbox.id = `checkbox${item.id}`;
-  checkbox.name = toString(`checkbox${item.image}`);
-  checkbox.value = item.description;
-
-  const label = document.createElement('label');
-  label.htmlFor = `checkbox${item.id}`;
-  label.appendChild(document.createTextNode(item.description));
-  
-  alignment.appendChild(checkbox);
-  alignment.appendChild(label);
-  alignment.appendChild(document.createElement('br')); 
-  checkboxContainer.appendChild(alignment);
-  
-});
-
-
-const len = cards.length;
-
-const all_cards = cards.forEach((card) => {
-  console.log(card.id);
-  console.log(card.description);
-  console.log(card.hint);
-  console.log(card.image);
-});
-
 function shuffleCards() {
   cards_container.classList.remove("hidden");
   image.classList.remove("hidden");
@@ -384,12 +338,70 @@ function shuffleCards() {
     card_desc.innerText = randomHint;
   }
 }
+cards.forEach((item) => {
+  const checkbox = document.createElement("input");
+  checkbox.type = "radio";
+  checkbox.id = `checkbox${item.id}`;
+  checkbox.name = toString(`checkbox${item.image}`);
+  checkbox.value = item.description;
+
+  const label = document.createElement("label");
+  label.htmlFor = `checkbox${item.id}`;
+  label.appendChild(document.createTextNode(item.description));
+  label.onclick = guessTheCard;
+  alignment.appendChild(checkbox);
+  alignment.appendChild(label);
+  alignment.appendChild(document.createElement("br"));
+  checkboxContainer.appendChild(alignment);
+});
+
+const len = cards.length;
+
+const all_cards = cards.forEach((card) => {
+  console.log(card.id);
+  console.log(card.description);
+  console.log(card.hint);
+  console.log(card.image);
+});
+
+
+
 shuffle_btn.addEventListener("click", shuffleCards);
 
-function guessTheCard(){
-  function getRandomElement(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex].description;
-  }
+//Opening and closing modal
+function openModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "block";
+}
 
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Function to handle the guess made by the user
+function guessTheCard() {
+  const selectedCheckbox = shuffleCards.find(
+    (checkbox) => checkbox.checked === true
+  );
+
+  if (!selectedCheckbox) {
+    alert("Please select a card description before guessing.");
+    return;
+  }
+  const selectedValue = selectedCheckbox.value;
+  const correctCard = cards.find((card) => card.description === selectedValue);
+  if (correctCard) {
+    score_nbr.innerText = parseInt(score_nbr.innerText) + 1;
+    alert("Congratulations! You guessed the correct card.");
+  } else {
+    alert("Sorry, your guess was incorrect.");
+  }
 }

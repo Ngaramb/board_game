@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="game">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h3>Cards Description</h3>
+          <p>Choose a description matching with the card shown.</p>
+          <div class="cards_desc">
+            <div id="checkboxContainer">
+              <div id="alignment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="score">
+        <h5>Score:</h5>
+        <span id="score_nbr">0</span>
+      </div>
+      <div class="board"></div>
+      <div class="cards_describer">
+        <div id="cards_container" class="card_image hidden">
+          <h2>Card</h2>
+          <img id="image" class="hidden" src="cards/1.png" alt="card image" />
+        </div>
+        <div class="card_transcriber">
+          <h2 id="card_title">Game Instructions</h2>
+          <p id="card_desc">
+            To start a game, you need to shuffle the cards, After you shuffle
+            the cards, you have to choose from the description what corresponds
+            to the displayed card, if the card is correct, You will advance to
+            the next level and your dice will move. And if the card is incorret,
+            you will stay on the current level.
+          </p>
+          <p id="no_display"></p>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <div class="shuffle_btn">
+      <button id="shuffle" onclick="shuffleCards()">🔀Shuffle cards</button>
+    </div>
+	<button class="btn-info" onclick="openModal()">Choose</button>
+    <script src="script.js"></script>
+  </body>
+</html>
